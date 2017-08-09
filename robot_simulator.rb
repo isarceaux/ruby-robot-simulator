@@ -83,7 +83,7 @@ class Simulator
 
   def evaluate(robot,letters)
     instructions(letters).each do |method_robot|
-      robot.method_robot
+      robot.send(method_robot)
     end   
     #Not working to be finished
   end

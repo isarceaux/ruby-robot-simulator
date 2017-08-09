@@ -141,7 +141,6 @@ class RobotSimulatorTest < Minitest::Test
   end
 
   def test_instruct_many_robots # rubocop:disable Metrics/MethodLength
-    skip
     robot1 = Robot.new
     robot2 = Robot.new
     robot3 = Robot.new

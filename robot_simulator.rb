@@ -61,7 +61,33 @@ end
 
 class Simulator
 
+  def instructions(instructions)
+    array = []
+    instructions.length.times do |i|
+      case instructions[i]
+        when 'L'
+          array << :turn_left
+        when 'R'
+          array << :turn_right
+        when 'A'
+          array << :advance
+      end
+    end
+    return array
+  end
 
+  def place( robot , **f)
+    robot.coordinates=[f[:x],f[:y]]
+    robot.bearing=f[:direction]
+  end
+
+  def evaluate(robot,letters)
+    instructions(letters).each do |method_robot|
+      robot.method_robot
+    end   
+    #Not working to be finished
+  end
 
 end
+
 
